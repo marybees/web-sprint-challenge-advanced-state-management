@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "../index.css"
 import { connect } from "react-redux";
 import Smurf from "./Smurf";
 
-const SmurfList = props => {
+function SmurfList(props) {
 
     return (
         <div className="smurf-list">
-            <div>{smurfs.map((smurf) => {
+            <div>{props.smurfs.map((smurf) => {
                 return <Smurf key={smurf.id} name={smurf.name} age={smurf.age} height={smurf.height} smurf={smurf} />;
             })}</div>
         </div>

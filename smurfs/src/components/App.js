@@ -10,7 +10,7 @@ function App({ fetchSmurfs, loadingStats, errorMessage }) {
     fetchSmurfs();
   }, [fetchSmurfs]);
   return (
-    <div className="header" style={{ backgroundImage: "url(" + "https://images.unsplash.com/photo-1559951407-5195d454e11b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80" + ")" }}>
+    <div className="header">
       <h1>Smurf Village</h1>
       {!loadingStats ? <SmurfList /> : <Spinner color="primary" />}
       {errorMessage !== "" ? <div>{errorMessage}</div> : null}

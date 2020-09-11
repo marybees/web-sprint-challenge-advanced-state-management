@@ -3,9 +3,9 @@ import React from "react";
 function Smurf({ smurf }) {
     return (
         <div>
-            <h3>{smurf.name}</h3>
-            <p>{smurf.age}</p>
-            <p>{smurf.height}</p>
+            <h5>{smurf.name}</h5>
+            <h6>{smurf.age}</h6>
+            <h6>{smurf.height}</h6>
         </div>
     )
 }
