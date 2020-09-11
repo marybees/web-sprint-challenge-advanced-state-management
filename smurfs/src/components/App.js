@@ -12,7 +12,7 @@ function App({ fetchSmurfs, postSmurf, loadingSmurfs, errorMessage }) {
   }, [fetchSmurfs]);
   return (
     <div className="header">
-      <h1>Smurf Village</h1>
+      <h1 style={{ padding: '2% 0' }}>Smurf Village</h1>
       <SmurfForm postSmurf={postSmurf} />
       {!loadingSmurfs ? <SmurfList /> : <Spinner color="primary" />}
       {errorMessage !== "" ? <div>{errorMessage}</div> : null}

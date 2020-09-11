@@ -20,25 +20,25 @@ const SmurfForm = ({ postSmurf }) => {
         <Form onSubmit={addSmurf}>
             <FormGroup >
                 <Input
-                    style={{ width: "50%", textAlign: "center" }}
+                    style={{ width: "30%" }}
                     type="text"
                     name="name"
                     placeholder="Smurf Name"
                 />
                 <Input
-                    style={{ width: "50%", textAlign: "center" }}
+                    style={{ width: "30%" }}
                     type="text"
                     name="age"
                     placeholder="Smurf Age"
                 />
                 <Input
-                    style={{ width: "50%", textAlign: "center" }}
+                    style={{ width: "30%" }}
                     type="text"
                     name="height"
                     placeholder="Smurf Height"
                 />
             </FormGroup>
-            <Button>Add Smurf</Button>
+            <Button style={{ margin: '2% 0' }}>Add Smurf</Button>
         </Form>
     );
 }
