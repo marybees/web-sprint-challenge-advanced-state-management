@@ -7,13 +7,12 @@ import { Form, FormGroup, Input, Button } from 'reactstrap';
 const SmurfForm = ({ postSmurf }) => {
 
     const addSmurf = (e) => {
-        const smurfData =
-        {
-            "name": "Tubby",
-            "age": 34,
-            "height": 6
-        }
+        const formData = new FormData(e.target)
+        const smurfData = {}
         e.preventDefault();
+        for (let [key, value] of formData.entries()) {
+            smurfData[key] = value;
+        }
         postSmurf(smurfData);
     };
 
@@ -23,16 +22,19 @@ const SmurfForm = ({ postSmurf }) => {
                 <Input
                     style={{ width: "50%", textAlign: "center" }}
                     type="text"
+                    name="name"
                     placeholder="Smurf Name"
                 />
                 <Input
                     style={{ width: "50%", textAlign: "center" }}
                     type="text"
+                    name="age"
                     placeholder="Smurf Age"
                 />
                 <Input
                     style={{ width: "50%", textAlign: "center" }}
                     type="text"
+                    name="height"
                     placeholder="Smurf Height"
                 />
             </FormGroup>
